@@ -16,37 +16,63 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Memimoo</title>
   </head>
-  <body class="bg-[#FFF7E8] overflow-x-hidden">
-    <nav
-      class="flex justify-between items-center px-10 py-5"
-      data-aos="fade-down"
-    >
-      <div class="">
-        <img src="/src/asset/logos.svg" alt="" class="-ml-7" />
+  <body class="bg-[#FFF7E8] relative overflow-x-hidden">
+    <nav class="flex justify-between items-center px-10 py-5">
+      <div>
+        <img src="/src/asset/logos.svg" alt="Logo" class="-ml-7" />
       </div>
-      <div class="space-x-4">
-        <a href="#home" class="hover:text-biru hover:font-bold hover:transition-all"
+      <div class="hidden md:flex space-x-4">
+        <a href="#home" class="hover:text-biru hover:font-bold transition-all"
           >Home</a
         >
-        <a href="#product" class="hover:text-biru hover:font-bold hover:transition-all"
+        <a
+          href="#product"
+          class="hover:text-biru hover:font-bold transition-all"
           >Produk</a
         >
-        <a href="#layanan" class="hover:text-biru hover:font-bold hover:transition-all"
+        <a
+          href="#layanan"
+          class="hover:text-biru hover:font-bold transition-all"
           >Layanan</a
         >
-        <a href="#news" class="hover:text-biru hover:font-bold hover:transition-all"
+        <a href="#news" class="hover:text-biru hover:font-bold transition-all"
           >Contact</a
         >
       </div>
-      <div class="">
+      <div class="hidden md:flex">
         <a
           href="#contact"
           class="w-fit bg-biru px-6 py-2 rounded-full text-primarryellow font-bold"
           >Contact us</a
         >
       </div>
+      <div class="md:hidden">
+        <button id="hamburger-button" class="text-3xl">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
     </nav>
-  
+
+    <div
+      id="mobile-menu"
+      class="fixed -top-8 z-50 right-16 bg-white shadow-md p-4 rounded-lg mt-16 mr-5 hidden"
+    >
+      <div class="flex justify-end">
+        <button id="close-button" class="text-3xl">
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+      <a href="#home" class="block py-2 px-4 hover:bg-gray-200">Home</a>
+      <a href="#product" class="block py-2 px-4 hover:bg-gray-200">Produk</a>
+      <a href="#layanan" class="block py-2 px-4 hover:bg-gray-200">Layanan</a>
+      <a href="#news" class="block py-2 px-4 hover:bg-gray-200">Contact</a>
+      <a
+        href="#contact"
+        class="block py-2 px-4 bg-biru text-primarryellow font-bold rounded-full mt-2"
+        >Contact us</a
+      >
+    </div>
+
     <section class="px-10 py-20 min-h-screen" id="home">
       <div
         class="flex flex-col-reverse md:flex-row justify-between items-center"
@@ -198,7 +224,11 @@
             </div>
           </div>
           <div class="swiper-slide relative">
-            <img src="/src/asset/profiterole 1.svg" alt="" class="w-full h-auto" />
+            <img
+              src="/src/asset/profiterole 1.svg"
+              alt=""
+              class="w-full h-auto"
+            />
             <div
               class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gradient1 to-transparent"
             ></div>
@@ -216,7 +246,7 @@
         <div class="swiper-pagination mt-10"></div>
       </div>
     </section>
-    <section class="min-h-screen px-10" >
+    <section class="min-h-screen px-10">
       <div class="flex justify-between md:flex-row flex-col md:grid-cols-2">
         <div class="" data-aos="fade-right">
           <img src="/src/asset/grouprevisi.svg" alt="" class="" />
@@ -242,8 +272,10 @@
         </div>
       </div>
     </section>
-    <section class="min-h-screen px-10" id="layanan">
-      <div class="grid md:grid-cols-3 grid-cols-1 gap-10">
+    <section class="px-10 md:my-10" id="layanan">
+      <div
+        class="grid md:grid-cols-3 grid-cols-1 gap-10 md:mt-1 mt-20 mb:mb-20"
+      >
         <div
           class="group hover:bg-biru rounded-3xl p-5"
           data-aos="fade-right"
@@ -300,7 +332,7 @@
         </div>
       </div>
     </section>
-    <section class="min-h-screen px-10 md:mt-1 sm:mt-20" id="news">
+    <section class="px-10 md:mb-44 my-20" id="news">
       <div class="relative">
         <img src="/src/asset/absolute letter.svg" alt="" class="" />
         <div class="absolute inset-0 flex flex-col justify-center items-center">
@@ -323,45 +355,55 @@
         </div>
       </div>
     </section>
-    <section class="min-h-screen px-10" data-aos="fade-down">
+    <section class="px-10 my-20" data-aos="fade-down">
       <div class="grid md:grid-cols-3 grid-cols-1 gap-10">
-        <div class="">
-          <h1 class="text-[48px] font-core font-bold text-biru">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-core font-bold text-biru">
             We Serve Online Orders
           </h1>
-          <p>
+          <p class="mt-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
             doloribus i psam, eaque adipisci maxime nam dolorem voluptates nihil
             repellat cumque, numquam laboriosam sequi hic. Ex?
           </p>
         </div>
-        <div class="">
-          <img src="/src/asset/contact.svg" alt="" class="-mt-16" />
+        <div class="flex justify-center">
+          <img
+            src="/src/asset/contact.svg"
+            alt="Contact"
+            class="w-full md:w-auto"
+          />
         </div>
         <div class="space-y-8">
-          <div class="flex">
-            <div class="">
-              <img src="/src/asset/mapss.png" alt="" />
-            </div>
-            <div class="ml-10">
+          <div class="flex items-start">
+            <img
+              src="/src/asset/mapss.png"
+              alt="Map"
+              class="w-12 h-12 md:w-auto md:h-auto"
+            />
+            <div class="ml-4 md:ml-10">
               <h1 class="font-bold">Memimo</h1>
               <h1>North Denpasar, Bali</h1>
             </div>
           </div>
-          <div class="flex">
-            <div class="">
-              <img src="/src/asset/clock.svg" alt="" />
-            </div>
-            <div class="ml-12">
+          <div class="flex items-start">
+            <img
+              src="/src/asset/clock.svg"
+              alt="Clock"
+              class="w-12 h-12 md:w-auto md:h-auto"
+            />
+            <div class="ml-4 md:ml-12">
               <h1 class="font-bold">Open 09:00 - 22:00 PM</h1>
               <h1>lorem ipsum on siu siu</h1>
             </div>
           </div>
-          <div class="flex">
-            <div class="">
-              <img src="/src/asset/call.svg" alt="" />
-            </div>
-            <div class="ml-14">
+          <div class="flex items-start">
+            <img
+              src="/src/asset/call.svg"
+              alt="Call"
+              class="w-12 h-12 md:w-auto md:h-auto"
+            />
+            <div class="ml-4 md:ml-14">
               <h1 class="font-bold">0895-8001-83963</h1>
               <h1>lorem ipsum on siu siu</h1>
             </div>
@@ -369,10 +411,11 @@
         </div>
       </div>
     </section>
-    <section class="px-40 py-10 bg-primarryellow">
+
+    <section class="px-4 py-10 md:px-40 bg-primarryellow">
       <footer class="">
         <h1 class="text-center font-bold font-core text-4xl">Memimo</h1>
-        <p class="text-center text-sm">
+        <p class="text-center text-sm mt-4">
           Memimo adalah sebuah usaha di bidang baking dan pastry yang
           menghadirkan produk-produk berkualitas tinggi dengan rasa autentik dan
           kreativitas dalam penyajian. Dengan pelayanan yang ramah dan
@@ -384,30 +427,30 @@
           <i class="bx bxl-instagram-alt"></i>
           <i class="bx bxl-whatsapp"></i>
         </div>
-        <div class="flex justify-center mt-6 gap-3">
+        <div class="flex flex-wrap justify-center mt-6 gap-3">
           <a
             href=""
-            class="bg-black rounded-full w-fit text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
+            class="bg-black rounded-full text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
             >Home</a
           >
           <a
             href=""
-            class="bg-black rounded-full w-fit text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
+            class="bg-black rounded-full text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
             >Produk</a
           >
           <a
             href=""
-            class="bg-black rounded-full w-fit text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
+            class="bg-black rounded-full text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
             >Layanan</a
           >
           <a
             href=""
-            class="bg-black rounded-full w-fit text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
+            class="bg-black rounded-full text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
             >Testimoni</a
           >
           <a
             href=""
-            class="bg-black rounded-full w-fit text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
+            class="bg-black rounded-full text-[#996E00] px-6 py-2 font-bold border-[#996E00] border-2"
             >Contact</a
           >
         </div>
@@ -415,8 +458,34 @@
     </section>
 
     <script>
+      function hideMobileMenuOnResize() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (window.innerWidth > 768) {
+          // Adjust the breakpoint as needed
+          mobileMenu.classList.add("hidden");
+        }
+      }
+
+      // Add event listener to window resize event
+      window.addEventListener("resize", hideMobileMenuOnResize);
+
+      // Event listener to toggle mobile menu visibility
+      document
+        .getElementById("hamburger-button")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("close-button")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+
+      // Ensure mobile menu is hidden initially on desktop view
+      hideMobileMenuOnResize();
+
       const swiper = new Swiper(".swiper", {
-        // Optional parameters
         breakpoints: {
           1200: {
             slidesPerView: 3,
@@ -431,32 +500,26 @@
         direction: "horizontal",
         loop: true,
         mousewheel: true,
-        // If we need pagination
         pagination: {
           el: ".swiper-pagination",
         },
-
-        // Navigation arrows
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-
-        // And if we need scrollbar
         scrollbar: {
           el: ".swiper-scrollbar",
         },
-
         autoplay: {
           delay: 1000,
-          disableOnInteraction: false, // Menonaktifkan autoplay setelah interaksi pengguna terjadi
+          disableOnInteraction: false,
         },
       });
+
       swiper.el.addEventListener("mouseenter", function () {
         swiper.autoplay.stop();
       });
 
-      // Mengaktifkan kembali autoplay saat pengguna meninggalkan slider
       swiper.el.addEventListener("mouseleave", function () {
         swiper.autoplay.start();
       });
